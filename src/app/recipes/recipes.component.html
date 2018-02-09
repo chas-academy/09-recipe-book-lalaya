@@ -1,3 +1,18 @@
-<p>
-  recipes works!
-</p>
+<h2> Trying this out </h2>
+<ul class ="recipes">
+    <li *ngFor= "let recipe of recipes">
+      <span class="badge">{{recipe.id}}</span> {{recipe.name}}
+    </li>
+</ul>
+
+
+
+<!--
+{{recipe}}
+
+<h1> API tryout </h1>
+<div *ngFor= "let post of post">
+  <h3>{{post.title}}</h3>
+</div>
+
+-->
