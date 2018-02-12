@@ -1,6 +1,11 @@
-<h1>Yummy in my Tummy</h1>
+<h1>{{ title}}</h1>
+
+<nav>
+  <a routerLink="/dashboard">Home</a>
+  <a routerLink="/recipes">Recipes</a>
+</nav>
 
 <input class="search" type="text" placeholder="search">
 
-<app-recipes></app-recipes>
+<router-outlet></router-outlet>
 <app-messages></app-messages>
