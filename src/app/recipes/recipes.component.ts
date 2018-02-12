@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../services/data.service';
+// import { DataService } from '../services/data.service';
+import { Recipe} from '../recipe';
 import { RECIPES } from '../mock-recipes';
 
 @Component({
@@ -9,27 +10,32 @@ import { RECIPES } from '../mock-recipes';
 })
 
 export class RecipesComponent implements OnInit {
-    recipe = 'Chocolate Cookie';
-    post: Post[];
 
     recipes = RECIPES;
+    selectedRecipe: Recipe;
 
-  constructor(private dataService: DataService) {
+  /* constructor(private dataService: DataService) {
     console.log('testing');
-  }
+  } */
+
+  constrctor() { }
 
   ngOnInit() {
 
-    this.dataService.getPost().subscribe((post) => {
+    /*this.dataService.getPost().subscribe((post) => {
         console.log(post);
       this.post = post;
-    });
+    }); */
 
+  }
+
+  onSelect(recipe: Recipe ): void {
+    this.selectedRecipe = recipe;
   }
 
 }
 
-interface Post {
+/* interface Post {
     id: number;
     title: string;
-}
+} */

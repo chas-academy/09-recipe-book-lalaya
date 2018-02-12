@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule} from '@angular/http';
+// import { HttpModule} from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -17,7 +18,8 @@ import {DataService } from './services/data.service';
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    FormsModule
+    // HttpModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]
