@@ -32,4 +32,9 @@ export class RecipeDetailsComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  save(): void {
+    this.recipeService.updateRecipe(this.recipe)
+      .subscribe(() => this.goBack());
+   }
 }
